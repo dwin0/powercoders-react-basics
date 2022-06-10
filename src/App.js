@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import BackendData from "./BackendData";
+import MyButton from "./MyButton";
+import Title from "./Title";
+
+const names = [
+  { name: "a", id: 100, age: 10 },
+  { name: "b", id: 101, age: 20 },
+  { name: "c", id: 102, age: 30 },
+  { name: "d", id: 103, age: 40 },
+];
+
+// map X -> Y
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Title>Persons over 25:</Title> */}
+      <BackendData />
+      {/* {names
+        .filter((person) => person.age > 25)
+        .map((person) => (
+          <MyButton key={person.id} name={person.name} />
+        ))} */}
     </div>
   );
 }
